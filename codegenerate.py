@@ -53,8 +53,12 @@ def codegenerate():
    fin = True
    print("Enter desired code I.D. : ")
    id = input()
+   date = datetime.date(datetime.now())
+   time = datetime.time(datetime.now())
    f=open("codes.py", "a+")
    f.write("code" + (id) + " = " + repr(e) + "\n")
+   f.write("datecode" + (id) + "=" + int(date) + "\n")
+   f.write("timecode" + (id) + "=" + repr(time) + "\n")
    f.close()
    print("Your result is....")
    print(e)
