@@ -3,7 +3,8 @@
 import sys #this allows you to use the sys.exit command to quit/logout of the application
 import base64
 import codegenerate
-import codeview
+import codeview2
+import code
 def main():
     menu()
 def menu():
@@ -22,7 +23,8 @@ def menu():
         codegenerate.start()
         menu()
     elif choice == "B" or choice =="b":
-        codeview.codeview()
+        codeview2.codeview()
+        code.bitch()
     elif choice == "C" or choice =="c":
         pass
         menu()
@@ -49,11 +51,11 @@ def semimenu():
         codegenerate.codegenerate()
         semimenu()
     elif choice == "B" or choice =="b":
-        codeview.desiredid()
+        codeview2.desiredid()
     elif choice == "C" or choice =="c":
         pass
     elif choice=="D" or choice=="d":
-       printcode()
+        pass
     else:
         print("You must only select either A,B,C, or D.")
         print("Please try again")

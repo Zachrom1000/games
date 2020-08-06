@@ -53,16 +53,19 @@ def codegenerate():
    fin = True
    print("Enter desired code I.D. : ")
    id = input()
+   print("Define a Name")
+   name = input()
    date = datetime.date(datetime.now())
    time = datetime.time(datetime.now())
-   f=open("codes.py", "a+")
-   f.write("code" + (id) + " = " + repr(e) + "\n")
-   f.write("datecode" + (id) + " = " + repr(date) + "\n")
-   f.write("timecode" + (id) + " = " + repr(time) + "\n")
-   f.close()
+   str(date)
+   str(time)
+   complete = {"id": id , "data" : e , "date" : date , "time" : time , "name" : name}
    print("Your result is....")
    print(e)
+   print(complete)
+   f=open("codes.py","w+")
+   f.write("code = " + str(complete))
+   f.close
    print("\nCopy whats INSIDE the quotes\n")
    end = 1
    exit()
-   
